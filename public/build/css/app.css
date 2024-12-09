@@ -1528,6 +1528,7 @@ h3 {
 }
 .contacto__formulario {
   padding: 0 4rem;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .contacto__formulario {
