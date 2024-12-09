@@ -1,0 +1,29 @@
+{
+  "name": "portfoliodimanse",
+  "version": "1.0.0",
+  "description": "Portfolio creado con php, mvc, sass, gulp, javaScript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dimanse/portfolio_dimanse.git"
+  },
+  "author": "Domingo Curbeira \"Dimanse\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dimanse/portfolio_dimanse/issues"
+  },
+  "homepage": "https://github.com/Dimanse/portfolio_dimanse#readme",
+  "devDependencies": {
+    "glob": "^11.0.0",
+    "gulp": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^6.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.82.0",
+    "sharp": "^0.33.5"
+  }
+}
