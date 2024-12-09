@@ -1472,68 +1472,8 @@ h3 {
   color: #64748B;
 }
 
-.transiciones {
-  padding: 5rem 0;
-  width: min(95%, 80rem);
-  margin: 0 auto;
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: repeat(1, 1fr);
-}
-@media (min-width: 768px) {
-  .transiciones {
-    display: grid;
-    gap: 5rem;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.transiciones__arriba, .transiciones__abajo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.transiciones__arriba:hover, .transiciones__abajo:hover {
-  cursor: pointer;
-}
-.transiciones__arriba:hover {
-  cursor: pointer;
-}
-.transiciones__abajo {
-  text-align: center;
-  border: 2px solid #c1c2c3;
-  border-radius: 1rem;
-}
-.transiciones__abajo i {
-  padding-top: 3rem;
-  margin: 0 auto;
-}
-.transiciones__numero {
-  font-size: 4rem;
-  font-weight: 300;
-  color: #FFFFFF;
-  margin-bottom: 0;
-}
-.transiciones__texto {
-  font-size: 2rem;
-  margin: 1rem 0 0 0;
-  color: #c1c2c3;
-  padding-bottom: 3rem;
-}
-.transiciones__descripcion {
-  color: #FFFFFF;
-  font-size: 2rem;
-}
-
-.hide,
-.ocultar {
-  display: none;
-}
-
-.show,
-.mostrar {
-  display: block;
-}
-
+@use "base/variables" as v;
+@use "base/mixins" as m;
 .contenedor {
   width: 15rem;
   height: 15rem;
@@ -1764,12 +1704,10 @@ h3 {
   font-size: 2rem;
 }
 
-.hide,
 .ocultar {
   display: none;
 }
 
-.show,
 .mostrar {
   display: block;
 }/*# sourceMappingURL=app.css.map */
