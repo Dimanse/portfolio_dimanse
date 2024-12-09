@@ -904,8 +904,13 @@ h3 {
 }
 @media (min-width: 768px) {
   .software {
-    width: 110rem;
-    margin: -5rem auto -14.3rem auto;
+    width: 100%;
+    margin: -5rem auto -10.5rem auto;
+  }
+}
+@media (min-width: 1024px) {
+  .software {
+    margin: -5rem auto -17rem auto;
   }
 }
 .imagen__caricatura {
@@ -1528,7 +1533,6 @@ h3 {
 }
 .contacto__formulario {
   padding: 0 4rem;
-  width: 100%;
 }
 @media (min-width: 768px) {
   .contacto__formulario {
@@ -1578,11 +1582,7 @@ h3 {
   border: 1px solid #c1c2c3;
   border-radius: 1rem;
   padding: 2rem;
-}
-@media (min-width: 768px) {
-  .contacto textarea {
-    width: 100%;
-  }
+  width: 100%;
 }
 .contacto__boton {
   width: 100%;
