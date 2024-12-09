@@ -121,3 +121,44 @@
         </div>
     </div>
 </section>
+<section class="transiciones">
+    <div class="transiciones__grid">
+        <div class="transiciones__arriba  " data-numero="1">
+            <p class="transiciones__numero">01</p>
+            <p class="transiciones__texto">Estrategia</p>
+
+        </div>
+        <div class="transiciones__abajo ocultar " id="numero-1">
+            <i class="fa-solid fa-compass-drafting"></i>
+            <p class="transiciones__descripcion">Una buena estrategia es la clave</p>
+        </div>
+    </div>
+    <div class="transiciones__grid">
+        <div class="transiciones__arriba  " data-numero="2">
+            <p class="transiciones__numero">02</p>
+            <p class="transiciones__texto">Developer</p>
+        </div>
+        <div class="transiciones__abajo ocultar " id="numero-2">
+            <i class="fa-solid fa-desktop"></i>
+            <p class="transiciones__descripcion">Cada proyecto tiene personalidad propia</p>
+        </div>
+    </div>
+    <div class="transiciones__grid">
+        <div class="transiciones__arriba  " data-numero="3">
+            <p class="transiciones__numero">03</p>
+            <p class="transiciones__texto">Deployment</p>
+        </div>
+        <div class="transiciones__abajo ocultar " id="numero-3">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p class="transiciones__descripcion">Garantía
+y confiabilidad </p>
+        </div>
+    </div>
+   
+</section>
+
+
+<?php 
+    $script = 
+        "<script src='build/js/app_01.js'></script>";
+?>
