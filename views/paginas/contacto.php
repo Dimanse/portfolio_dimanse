@@ -57,12 +57,13 @@
             />
         </div>
         <div class="contacto__campo">
-            <label for="email">Tu teléfono</label>
+            <label for="telefono">Tu teléfono</label>
             <input
                 class="contacto__input"
                 id="telefono"
                 type="tel"
                 name="telefono"
+                placeholder="Tu Telefono"
     
             />
         </div>
@@ -84,12 +85,12 @@
             </div>
 
             <div class="contacto__campo">
-                <label for="fecha">Hora:</label>
+                <label for="hora">Hora:</label>
                 <input
                     class="contacto__input"
-                    id="fecha"
+                    id="hora"
                     type="text"
-                    name="fecha"
+                    name="hora"
                     value="<?php echo $fechaActual; ?>"
                     readonly 
                     onmousedown="return false;" 

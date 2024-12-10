@@ -2,24 +2,28 @@
 
 namespace Model;
 
-class Mensaje extends ActiveRecord {
+class Mensaje extends ActiveRecord{
     protected static $tabla = 'mensajes';
-    protected static $columnasDB = ['id', 'nombre', 'apellidos', 'email', 'mensaje', 'fecha'];
+    protected static $columnasDB = ['id', 'nombre', 'apellidos', 'email', 'telefono', 'mensaje', 'fecha', 'hora'];
 
     public $id;
     public $nombre;
     public $apellidos;
     public $email;
+    public $telefono;
     public $mensaje;
     public $fecha;
-    public function __construct($args = [])
-    {
+    public $hora;
+
+    public function __construct($args = []){
         $this->id = $args['id'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
         $this->apellidos = $args['apellidos'] ?? '';
         $this->email = $args['email'] ?? '';
+        $this->telefono = $args['telefono'] ?? '';
         $this->mensaje = $args['mensaje'] ?? '';
         $this->fecha = $args['fecha'] ?? '';
+        $this->hora = $args['hora'] ?? '';
     }
 
     public function validar() {
@@ -41,4 +45,5 @@ class Mensaje extends ActiveRecord {
         return self::$alertas;
 
     }
+
 }

@@ -22,18 +22,18 @@ Class PaginasController{
     
 
     public static function contacto(Router $router){
+        $mensaje = new Mensaje;
         $alertas = [];
         $fecha = date_default_timezone_set('America/managua');
         $fechaActual = Date('H:i');
-        // debuguear($fechaActual);
-
+        
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $mensaje = new Mensaje($_POST);
+            $mensaje->sincronizar($_POST);
             $alertas = $mensaje->validar();
-
             
             if(empty($alertas)){
                 $resultado = $mensaje->guardar();
+                // debuguear($resultado);
                 if($resultado){
                     header('Location: /');
                 }
@@ -45,22 +45,12 @@ Class PaginasController{
         $router->render('paginas/contacto', [
             'titulo' => 'Gracias por tomarte el tiempo de comunicarte conmigo. ¿Cómo puedo ayudarte hoy?',
             'alertas' => $alertas,
-            'fechaActual' => $fechaActual
+            'fechaActual' => $fechaActual,
+            'mensaje' => $mensaje,
         ]);
     }
-    public static function cotizaciones(Router $router){
-        
-        
-
-        if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            
-
-        }
-        
-        $router->render('paginas/cotizaciones', [
-            'titulo' => 'Gracias por tomarte el tiempo de comunicarte conmigo. ¿Cómo puedo ayudarte hoy?',
-        ]);
-    }
+    
+    
 
 
 }
