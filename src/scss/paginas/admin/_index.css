@@ -1,0 +1,7 @@
+@forward 'dashboard';
+@forward 'inicio';
+@forward 'correos';
+@forward 'trabajos';
+@forward 'formulario';
+@forward 'crear';
+@forward 'editar';

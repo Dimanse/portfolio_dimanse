@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.servicios{
+    padding: 5rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    &__heading{
+        @include m.nombre-pagina;
+        margin-bottom: 5rem;
+    }
+    &__grid{
+        @include m.grid(1, 1rem);
+        @include m.tablet{
+            @include m.grid(2, 5rem);
+            align-items: center;
+        }
+    }
+    &__contenedor-texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fa-mobile-screen-button::before,
+    .fa-desktop::before{
+        color: v.$gris;
+        width: 8rem;
+    }
+
+    &__titulo{
+        @include m.nombre-pagina;
+        color: v.$gris;
+    }
+
+    &__descripcion{
+        @include m.descripcion-pagina;
+        color: v.$gris;
+    }
+}
+
+// .mostrar{
+//     display: block;
+// }

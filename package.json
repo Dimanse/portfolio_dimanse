@@ -1,0 +1,21 @@
+{
+  "name": "portfolio_dimanse",
+  "version": "1.0.0",
+  "description": "Portfolio personal creado con html, css, javaScript,php 8, mvc, Gulp, Sass",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "Domingo Curbeira \"Dimanse\"",
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^11.0.0",
+    "gulp": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^6.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.83.0",
+    "sharp": "^0.33.5"
+  }
+}

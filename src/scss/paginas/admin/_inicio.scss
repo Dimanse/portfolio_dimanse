@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.inicio{
+
+    &__grid{
+        padding: 5rem 0;
+        @include m.grid(1, 3rem);
+        @include m.tablet{
+            @include m.grid(2, 5rem);
+        }
+    }
+
+    &__contenedor{
+        border: 2px solid v.$gris-claro;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 2px 2px 2px v.$gris-claro;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__nombre{
+        @include m.nombre-pagina;
+
+    }
+
+    &__imagen{
+        height: 30rem;
+    }
+
+    &__correo{
+        @include m.descripcion-pagina;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+
+    }
+
+    &__span{
+        font-weight: v.$bold;
+        color: v.$azul;
+    }
+
+    &__enlace{
+        @include m.descripcion-pagina;
+        color: v.$azul;
+        font-weight: v.$bold;
+        &:hover{
+            color: darken($color: v.$azul, $amount: 15);
+        }
+        
+    }
+}

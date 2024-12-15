@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.location{
+    padding: 5rem;
+    border-radius: 1rem;
+
+    &__grid{
+        @include m.grid(1, 2rem);
+        @include m.tablet{
+            @include m.grid(2, 5rem);
+        }
+
+    }
+
+    &__contenedor{
+        // margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .fa-location-dot::before,
+    .fa-envelope::before{
+        height: 8rem;
+        color: v.$gris;
+        
+    }
+
+    &__texto{
+        @include m.descripcion-pagina;
+        color: v.$gris;
+        margin-bottom: 0;
+    }
+
+}

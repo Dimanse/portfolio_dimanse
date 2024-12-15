@@ -1,0 +1,134 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.trabajo{
+
+    padding: 3rem 0;
+    margin-top: 5rem;
+
+    &__contenedor-boton{
+        @include m.desktop{
+            display: flex;
+            justify-content: end;
+        }
+    }
+
+    &__boton-crear{
+        display: flex !important;
+        
+        justify-content: center;
+        gap: 2rem;
+        margin: 3rem 0;
+        justify-content: center;
+        @include m.desktop{
+
+            width: 40% !important;
+        }
+    }
+    
+
+    &__heading{
+        @include m.nombre-pagina;
+    }
+
+    &__grid-admin{
+        margin: 5rem 0;
+        // padding: 0 1rem;
+        @include m.grid(1, 1rem);
+        @include m.tablet{
+            padding: 0 5rem;
+            @include m.grid(2, 5rem);
+            
+        }
+        
+    }
+
+    &__contenedor-admin{
+        margin-bottom: 5rem;
+        border: 1px solid v.$gris-claro;
+        box-shadow: .5rem .5rem v.$gris-claro;
+        @include m.desktop{
+            margin-bottom: 0;
+        }
+        
+    }
+
+    &__imagen{
+        width:100% ;
+    }
+
+    &__nombre{
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    &__descripcion{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__botones{
+        display: flex;
+        justify-content: space-around;
+        margin: 3rem 0;
+        
+    }
+
+    &__enlace{
+        width: 4rem;
+    }
+
+    &__acciones{
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        @include m.desktop{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+    &__boton-editar{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        @include m.desktop{
+
+            width: 40% !important;
+        }
+    }
+    &__boton-crear{
+        display: flex !important;
+        
+        justify-content: center;
+        gap: 2rem;
+        margin: 3rem 0;
+        @include m.desktop{
+            justify-content: center;
+            width: 40% !important;
+        }
+    }
+    &__boton-eliminar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        @include m.desktop{
+            margin: 0;
+        }
+    }
+
+    
+    .fa-circle-xmark{
+        color: v.$rojo;
+        font-size: 2rem;
+    }
+    
+    .fa-user-pen{
+        color: v.$azul;
+        font-size: 2rem;
+        margin: 0;
+    }
+}

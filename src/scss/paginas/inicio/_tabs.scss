@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tabs{
+    padding: 1rem 0;
+    @include m.tablet{
+        display: flex;
+
+    }
+    button{
+        
+        background-color: v.$blanco;
+        border: none;
+        color: v.$gris;
+        text-transform: uppercase;
+        padding: 2rem 1rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        transition: background-color 300ms ease;
+
+        &:hover{
+            cursor: pointer;
+            background-color: lighten($color: v.$gris, $amount: 30);
+            
+        }
+
+        .fa-mobile-screen-button::before,
+        .fa-desktop::before,
+        .fa-pen-ruler::before{
+            color: v.$gris;
+        }
+
+        &.actual{
+            background-color: v.$blanco;
+            border: 3px solid v.$gris;
+            color: v.$gris;
+        }
+    }
+}

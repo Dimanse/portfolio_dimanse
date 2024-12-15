@@ -1,0 +1,99 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.crear{
+    padding: 5rem 0;
+
+    &__heading{
+
+        @include m.nombre-pagina;
+    }
+
+    &__texto{
+        @include m.descripcion-pagina;
+        width: 85%;
+        margin: 0 auto;
+        line-height: 1.7;
+    }
+
+    &__grid{
+        display: flex;
+        flex-direction: column;
+        @include m.tablet{   
+            gap: 2rem;
+        }
+        @include m.desktop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+    }
+
+    &__campo{
+        margin-top: 3rem;
+        flex: 1;
+       
+    }
+
+    label{
+        @include m.descripcion-pagina;
+        color: v.$gris;
+        font-size: 2rem;
+        display: block;
+        text-align: left;
+        margin-bottom: 1rem
+    }
+
+    &__input{
+        width: 100%;
+        border: 1px solid v.$gris-claro;
+        padding: 2rem;
+        border-radius: 1rem;
+        &::placeholder{
+            color: v.$gris-claro;
+        }
+    }
+
+    
+
+    &__boton{
+        
+        width: 100%;
+        padding: 1.5rem 6rem;
+        border-radius: 4rem;
+        border: 2px solid v.$azul;
+        color: v.$azul;
+        font-size: 2rem;
+        // font-weight: v.$bold;
+        margin-top: 5rem;
+        transition-property: background-color, color;
+        transition-duration: 500ms;
+        background-color: transparent;
+
+        @include m.tablet{
+            display: block;
+            width: auto;
+            margin: 5rem auto 0 auto;
+
+        }
+        &:hover{
+            background-color: v.$azul;
+            color: v.$blanco;
+        }
+    }
+
+    &__dropzone{
+        border: 2px dashed v.$gris-claro;
+        border-radius: 1rem;
+        width: 100%;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+}
